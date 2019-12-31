@@ -1,16 +1,18 @@
+<!DOCTYPE html>
 <html>
-  <title>
-    Formula Solver
-   </title>
-  
-  <body>
-    <h1>Formula Calculator</h1>
-  </body>
-  
-  <style>
-    body {
-      background-color:white;
-      color#fff;
-    }
-  </style>
+<body>
+<script>
+function showAnswer() {
+  var weight=document.getElementById("x").value;
+  var height=document.getElementById("y").value;
+  var bmi=(weight/(height*height))*10000;
+  document.getElementById("ans").innerHTML ="Bmi: " + bmi.toFixed(1) ;
+}
+</script>
+<h1>BMI Calculator</h1>
+Weight (kg) <input type="text" name="weight" value="" id="x"><br>
+Height (m) <input type="text" name="height" value="" id="y"><br>
+<p id="ans">Bmi: </p>
+<button type="button" onclick="showAnswer()">Formulate</button>
+</body>
 </html>
